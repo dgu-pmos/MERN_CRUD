@@ -1,9 +1,6 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({ margeParams : true });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.use('/api', require('./api'));
 
 module.exports = router;
