@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router({ margeParams : true });
 
-const tutorials = require('../../controller/tutorialsController');
+const tutorials = require('../../controller/TutorialController');
 
 router.get('/', tutorials.findAll);
 router.get('/published', tutorials.findAllPublished);
